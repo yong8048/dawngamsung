@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/PretendardVariable.woff2") format("woff2");
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --night: #0b1020;
+  --panel: #12182b;
+  --panel-2: #1a2238;
+  --line: rgba(232, 184, 109, 0.18);
+  --amber: #e8b86d;
+  --amber-dim: #c4923a;
+  --mist: #e8ecf6;
+  --muted: #9aa3bb;
+  --danger: #f07178;
+  --ok: #7dcea0;
+  --vh: 1vh;
+}
+
+@theme inline {
+  --color-night: var(--night);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-amber: var(--amber);
+  --color-amber-dim: var(--amber-dim);
+  --color-mist: var(--mist);
+  --color-muted: var(--muted);
+  --color-danger: var(--danger);
+  --color-ok: var(--ok);
+  --font-sans: "Pretendard", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  height: calc(var(--vh, 1vh) * 100);
+  background: var(--night);
+  color: var(--mist);
+  font-family: var(--font-sans);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(232, 184, 109, 0.35);
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(18, 24, 43, 0.92), rgba(11, 16, 32, 0.88));
+  border: 1px solid rgba(232, 184, 109, 0.16);
+  backdrop-filter: blur(18px);
+}
+
+.marker-chip {
+  position: relative;
+  white-space: nowrap;
+  background: #12182b;
+  color: #e8b86d;
+  border: 1px solid #e8b86d;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.marker-chip::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  bottom: -7px;
+  border-width: 7px 6px 0;
+  border-style: solid;
+  border-color: #e8b86d transparent transparent transparent;
+}
+
+.current-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #5b8cff;
+  border: 2px solid white;
+  box-shadow: 0 0 0 6px rgba(91, 140, 255, 0.25);
+}
+
+.report-pin {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px 999px 999px 4px;
+  transform: rotate(-45deg);
+  background: #e8b86d;
+  border: 2px solid #0b1020;
+}
+
+.naver-map-dark .marker-chip {
+  color: #e8b86d;
+}
+
+input[type="checkbox"] {
+  accent-color: #e8b86d;
+}
+
+.admin-input {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--night);
+  padding: 0 0.75rem;
+  color: var(--mist);
+}
