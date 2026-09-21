@@ -36,7 +36,7 @@ export const IntroPanel = () => {
         ))}
       </ul>
 
-      <div className="mt-auto px-6 pb-5 text-[11px] text-muted">
+      <div className="mt-auto px-6 pb-6 text-[11px] leading-5 text-muted">
         <p>sylee8048@gmail.com</p>
         {data?.ymd && <p>Data update : {data.ymd}</p>}
       </div>

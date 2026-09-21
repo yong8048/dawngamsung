@@ -29,7 +29,7 @@ export default function HomePage() {
         <ReportButton />
       </div>
       {(!isFirebaseConfigured || !isNaverConfigured) && (
-        <div className="pointer-events-none absolute top-16 right-3 z-30 rounded-full border border-amber/30 bg-night/80 px-3 py-1 text-[11px] text-amber">
+        <div className="pointer-events-none absolute top-20 right-3 z-30 hidden rounded-full border border-amber/30 bg-night/80 px-3 py-1 text-[11px] text-amber sm:block">
           {isFirebaseConfigured ? "네이버맵 키 대기" : "미리보기 데이터"}
         </div>
       )}

@@ -223,7 +223,7 @@ export const MapView = () => {
 
       <button
         onClick={goCurrent}
-        className="absolute right-3 bottom-36 z-10 flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-panel shadow-lg sm:right-5 sm:bottom-24"
+        className="absolute right-3 z-10 flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-panel shadow-lg sm:right-5 bottom-[290px] sm:bottom-24"
         aria-label="현재 위치"
       >
         <TbCurrentLocation />
