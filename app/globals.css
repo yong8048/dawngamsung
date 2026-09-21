@@ -1,24 +1,16 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Pretendard";
-  src: url("/PretendardVariable.woff2") format("woff2");
-  font-weight: 45 920;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
-  --night: #0b1020;
-  --panel: #12182b;
-  --panel-2: #1a2238;
-  --line: rgba(232, 184, 109, 0.18);
-  --amber: #e8b86d;
-  --amber-dim: #c4923a;
-  --mist: #e8ecf6;
-  --muted: #9aa3bb;
-  --danger: #f07178;
-  --ok: #7dcea0;
+  --night: #f4f1ec;
+  --panel: #ffffff;
+  --panel-2: #efebe4;
+  --line: #e4dfd6;
+  --amber: #3c2f27;
+  --amber-dim: #5c4a3d;
+  --mist: #1c1916;
+  --muted: #7a736a;
+  --danger: #b42318;
+  --ok: #3f6b4a;
   --vh: 1vh;
 }
 
@@ -33,7 +25,7 @@
   --color-muted: var(--muted);
   --color-danger: var(--danger);
   --color-ok: var(--ok);
-  --font-sans: "Pretendard", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-pretendard), "Pretendard", ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -47,6 +39,7 @@ body {
   background: var(--night);
   color: var(--mist);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
 button,
@@ -57,26 +50,26 @@ select {
 }
 
 ::selection {
-  background: rgba(232, 184, 109, 0.35);
+  background: rgba(60, 47, 39, 0.12);
 }
 
 .glass-panel {
-  background: linear-gradient(180deg, rgba(18, 24, 43, 0.92), rgba(11, 16, 32, 0.88));
-  border: 1px solid rgba(232, 184, 109, 0.16);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--line);
   backdrop-filter: blur(18px);
 }
 
 .marker-chip {
   position: relative;
   white-space: nowrap;
-  background: #12182b;
-  color: #e8b86d;
-  border: 1px solid #e8b86d;
+  background: #ffffff;
+  color: #3c2f27;
+  border: 1px solid #3c2f27;
   border-radius: 999px;
   padding: 6px 12px;
   font-size: 12px;
-  font-weight: 700;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  font-weight: 650;
+  box-shadow: 0 6px 16px rgba(28, 25, 22, 0.12);
 }
 
 .marker-chip::after {
@@ -86,16 +79,16 @@ select {
   bottom: -7px;
   border-width: 7px 6px 0;
   border-style: solid;
-  border-color: #e8b86d transparent transparent transparent;
+  border-color: #3c2f27 transparent transparent transparent;
 }
 
 .current-dot {
   width: 16px;
   height: 16px;
   border-radius: 999px;
-  background: #5b8cff;
+  background: #4c6b8a;
   border: 2px solid white;
-  box-shadow: 0 0 0 6px rgba(91, 140, 255, 0.25);
+  box-shadow: 0 0 0 6px rgba(76, 107, 138, 0.2);
 }
 
 .report-pin {
@@ -103,23 +96,19 @@ select {
   height: 18px;
   border-radius: 999px 999px 999px 4px;
   transform: rotate(-45deg);
-  background: #e8b86d;
-  border: 2px solid #0b1020;
-}
-
-.naver-map-dark .marker-chip {
-  color: #e8b86d;
+  background: #3c2f27;
+  border: 2px solid #ffffff;
 }
 
 input[type="checkbox"] {
-  accent-color: #e8b86d;
+  accent-color: #3c2f27;
 }
 
 .admin-input {
   height: 2.5rem;
   width: 100%;
   border-radius: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--line);
   background: var(--night);
   padding: 0 0.75rem;
   color: var(--mist);

@@ -60,14 +60,14 @@ export const ReportForm = () => {
     <section className="h-full overflow-y-auto px-5 py-6">
       <div className="mb-5 flex items-start justify-between">
         <div>
-          <p className="text-xs tracking-[0.2em] text-amber">REPORT</p>
+          <p className="text-xs tracking-[0.22em] text-muted">REPORT</p>
           <h2 className="mt-1 text-2xl font-semibold">매장 제보</h2>
         </div>
         <button onClick={stopReport} className="text-sm text-muted">
           닫기
         </button>
       </div>
-      <p className="mb-5 rounded-2xl border border-amber/20 bg-amber/10 px-4 py-3 text-sm text-amber">
+      <p className="mb-5 rounded-2xl border border-line bg-panel-2 px-4 py-3 text-sm text-mist">
         지도를 눌러 매장 위치를 먼저 찍어 주세요.
         {reportPin ? " 위치가 선택되었습니다." : ""}
       </p>
@@ -75,7 +75,7 @@ export const ReportForm = () => {
       <div className="space-y-3">
         <Field label="지점명 *">
           <input
-            className="h-10 w-full rounded-xl border border-white/10 bg-night px-3"
+            className="h-10 w-full rounded-xl border border-line bg-night px-3"
             placeholder={STORE_FIELDS.name.placeholder}
             value={form.name}
             onChange={e => setForm({ ...form, name: e.target.value })}
@@ -90,7 +90,7 @@ export const ReportForm = () => {
         </Field>
         <Field label="전화">
           <input
-            className="h-10 w-full rounded-xl border border-white/10 bg-night px-3"
+            className="h-10 w-full rounded-xl border border-line bg-night px-3"
             placeholder={STORE_FIELDS.phone.placeholder}
             value={form.phone}
             onChange={e => setForm({ ...form, phone: e.target.value })}
@@ -114,7 +114,7 @@ export const ReportForm = () => {
         </Field>
         <Field label="기타">
           <textarea
-            className="h-24 w-full rounded-xl border border-white/10 bg-night p-3"
+            className="h-24 w-full rounded-xl border border-line bg-night p-3"
             value={form.additional}
             onChange={e => setForm({ ...form, additional: e.target.value })}
           />

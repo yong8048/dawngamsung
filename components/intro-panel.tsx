@@ -13,10 +13,10 @@ export const IntroPanel = () => {
   const { data } = useUpdateMeta();
 
   return (
-    <section className="relative flex h-full flex-col overflow-hidden bg-[radial-gradient(circle_at_top,_#2a1d0e_0%,_#12182b_46%,_#0b1020_100%)]">
+    <section className="relative flex h-full flex-col overflow-hidden bg-panel">
       <div className="px-6 pt-10">
-        <p className="text-xs tracking-[0.3em] text-amber">24HOUR CAFE</p>
-        <h2 className="mt-3 text-3xl font-semibold leading-tight">
+        <p className="text-xs tracking-[0.22em] text-muted">24HOUR CAFE</p>
+        <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-tight">
           꺼지지 않는
           <br />
           도시의 불빛
@@ -28,9 +28,9 @@ export const IntroPanel = () => {
         </p>
       </div>
 
-      <ul className="mt-8 space-y-2 px-6 text-sm text-mist/80">
+      <ul className="mt-8 space-y-2 px-6 text-sm text-mist">
         {lines.map(line => (
-          <li key={line} className="rounded-2xl border border-white/5 bg-white/5 px-4 py-3">
+          <li key={line} className="rounded-2xl border border-line bg-night px-4 py-3">
             # {line}
           </li>
         ))}

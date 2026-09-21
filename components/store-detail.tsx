@@ -62,14 +62,14 @@ export const StoreDetail = () => {
           </div>
         )}
         <button
-          className="absolute top-3 right-3 hidden h-8 w-8 items-center justify-center rounded-full bg-night/70 sm:flex"
+          className="absolute top-3 right-3 hidden h-8 w-8 items-center justify-center rounded-full bg-panel/90 sm:flex"
           onClick={() => setPanelOpen(false)}
         >
           ×
         </button>
       </div>
 
-      <div className="border-b border-white/10 px-5 py-5 text-center">
+      <div className="border-b border-line px-5 py-5 text-center">
         <div className="flex items-center justify-center gap-2">
           <h2 className="text-2xl font-semibold">{store.name}</h2>
           <button onClick={handleFav} className={isFav ? "text-amber" : "text-muted"}>
@@ -85,7 +85,7 @@ export const StoreDetail = () => {
           return (
             <button
               key={row.key}
-              className="flex w-full items-center gap-4 rounded-xl px-4 py-3 text-left hover:bg-white/5"
+              className="flex w-full items-center gap-4 rounded-xl px-4 py-3 text-left hover:bg-panel-2"
               onClick={() => row.copy && store[row.key] && copy(store[row.key])}
             >
               <span className="flex h-8 w-8 items-center justify-center text-amber">{row.icon}</span>

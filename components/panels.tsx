@@ -19,7 +19,7 @@ export const SidePanel = () => {
       </aside>
       {panelOpen && panelView === "detail" && (
         <button
-          className="absolute top-24 left-[400px] z-20 hidden h-11 w-10 items-center justify-center rounded-r-xl border border-l-0 border-white/10 bg-panel sm:flex"
+          className="absolute top-24 left-[400px] z-20 hidden h-11 w-10 items-center justify-center rounded-r-xl border border-l-0 border-line bg-panel sm:flex"
           onClick={() => setPanelOpen(false)}
         >
           ‹
@@ -40,7 +40,7 @@ export const BottomSheet = () => {
       }`}
     >
       <button className="flex w-full justify-center py-2" onClick={() => setPanelOpen(!panelOpen)}>
-        <span className="h-1 w-12 rounded-full bg-white/20" />
+        <span className="h-1 w-12 rounded-full bg-line" />
       </button>
       <div className="h-[calc(100%-20px)] overflow-y-auto">
         {panelView === "report" ? <ReportForm /> : panelView === "detail" ? <StoreDetail /> : <IntroPanel />}

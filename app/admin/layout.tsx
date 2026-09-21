@@ -40,7 +40,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   return (
     <div className="min-h-screen bg-night text-mist">
-      <header className="flex items-center gap-6 border-b border-white/10 px-6 py-4">
+      <header className="flex items-center gap-6 border-b border-line px-6 py-4">
         <Link href="/" className="flex items-center gap-2">
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-amber text-night">✦</span>
           <span className="font-semibold">새벽 감성 어드민</span>

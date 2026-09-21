@@ -8,7 +8,7 @@ import { GENERAL_BRANDS, UNMANNED_BRANDS } from "@/lib/constants";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const palette = ["#E8B86D", "#5B8CFF", "#7DCEA0", "#C4923A", "#F07178", "#9AA3BB", "#D4A5A5", "#555"];
+const palette = ["#3C2F27", "#8A7A6B", "#C9B8A6", "#5C6B5A", "#A65D4F", "#D7CFC4", "#6B5E52", "#9A938A"];
 
 export default function AdminDashboardPage() {
   const { stores } = useStores();
@@ -43,14 +43,14 @@ export default function AdminDashboardPage() {
 }
 
 const Stat = ({ label, value }: { label: string; value: string }) => (
-  <div className="rounded-3xl border border-white/10 bg-panel p-5">
+  <div className="rounded-3xl border border-line bg-panel p-5">
     <p className="text-sm text-muted">{label}</p>
     <p className="mt-2 text-3xl font-semibold text-amber">{value}</p>
   </div>
 );
 
 const ChartCard = ({ title, labels, data }: { title: string; labels: string[]; data: number[] }) => (
-  <div className="rounded-3xl border border-white/10 bg-panel p-5">
+  <div className="rounded-3xl border border-line bg-panel p-5">
     <h2 className="mb-4 text-center">{title}</h2>
     <Doughnut
       data={{
@@ -59,14 +59,14 @@ const ChartCard = ({ title, labels, data }: { title: string; labels: string[]; d
           {
             data,
             backgroundColor: palette,
-            borderColor: ["#12182B"],
+            borderColor: ["#ffffff"],
             borderWidth: 2,
           },
         ],
       }}
       options={{
         plugins: {
-          legend: { labels: { color: "#9AA3BB" } },
+          legend: { labels: { color: "#7A736A" } },
         },
       }}
     />

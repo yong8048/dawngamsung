@@ -57,7 +57,7 @@ export const StoreEditor = ({
   };
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-panel p-6">
+    <div className="rounded-3xl border border-line bg-panel p-6">
       <div className="grid gap-4 md:grid-cols-2">
         <Field label={STORE_FIELDS.name.title}>
           <input
@@ -82,7 +82,7 @@ export const StoreEditor = ({
               placeholder={STORE_FIELDS.address.placeholder}
               onChange={e => setForm({ ...form, address: e.target.value, latitude: 0, longitude: 0 })}
             />
-            <button onClick={search} className="rounded-xl bg-white/10 px-3">
+            <button onClick={search} className="rounded-xl bg-panel-2 px-3">
               검색
             </button>
           </div>

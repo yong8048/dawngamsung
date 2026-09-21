@@ -24,7 +24,7 @@ export const MobileFilters = () => {
           key={item}
           onClick={() => handleFilter(item)}
           className={`shrink-0 rounded-full px-3 py-1 text-xs shadow-lg ${
-            filter === item ? "bg-amber text-night font-semibold" : "bg-night/80 text-mist border border-white/10"
+            filter === item ? "bg-amber text-night font-semibold" : "bg-panel text-mist border border-line"
           }`}
         >
           {item}

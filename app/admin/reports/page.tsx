@@ -37,7 +37,7 @@ export default function AdminReportsPage() {
 
   return (
     <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[280px_1fr]">
-      <aside className="rounded-3xl border border-white/10 bg-panel p-4">
+      <aside className="rounded-3xl border border-line bg-panel p-4">
         <h2 className="mb-3 font-semibold">대기 제보 {pending.length}</h2>
         <div className="space-y-2">
           {pending.map(item => (
@@ -45,7 +45,7 @@ export default function AdminReportsPage() {
               key={item.id}
               onClick={() => setReport(item)}
               className={`w-full rounded-2xl px-3 py-3 text-left ${
-                report?.id === item.id ? "bg-amber text-night" : "bg-white/5"
+                report?.id === item.id ? "bg-amber text-night" : "bg-panel-2"
               }`}
             >
               <p className="font-medium">{item.name || "이름 없음"}</p>
@@ -58,7 +58,7 @@ export default function AdminReportsPage() {
 
       <section>
         {!report ? (
-          <div className="flex h-80 items-center justify-center rounded-3xl border border-white/10 text-muted">
+          <div className="flex h-80 items-center justify-center rounded-3xl border border-line text-muted">
             제보를 선택해 주세요
           </div>
         ) : (
@@ -67,7 +67,7 @@ export default function AdminReportsPage() {
             initial={toInput()}
             submitLabel="승인하고 매장 등록"
             extra={
-              <div className="mt-4 rounded-2xl bg-white/5 p-4 text-sm text-muted">
+              <div className="mt-4 rounded-2xl bg-panel-2 p-4 text-sm text-muted">
                 기타 제보: {report.additional || "없음"}
                 {note}
               </div>

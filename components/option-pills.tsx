@@ -19,7 +19,7 @@ export const OptionPills = ({
           key={option}
           onClick={() => onChange(option)}
           className={`rounded-full px-3 py-1.5 text-sm ${
-            value === option ? "bg-amber text-night" : "border border-white/10 text-mist"
+            value === option ? "bg-amber text-night" : "border border-line text-mist"
           }`}
         >
           {option}
@@ -30,7 +30,7 @@ export const OptionPills = ({
           type="button"
           onClick={() => onChange("")}
           className={`rounded-full px-3 py-1.5 text-sm ${
-            value === "" ? "bg-white/10 text-mist" : "border border-white/10 text-muted"
+            value === "" ? "bg-panel-2 text-mist" : "border border-line text-muted"
           }`}
         >
           정보 없음

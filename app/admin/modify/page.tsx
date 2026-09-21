@@ -38,7 +38,7 @@ export default function AdminModifyPage() {
   return (
     <div className="mx-auto max-w-5xl">
       <h1 className="mb-6 text-2xl font-semibold">정보 수정</h1>
-      <div className="mb-6 flex flex-wrap gap-3 rounded-3xl border border-white/10 bg-panel p-4">
+      <div className="mb-6 flex flex-wrap gap-3 rounded-3xl border border-line bg-panel p-4">
         <select
           className="rounded-xl bg-night px-3 py-2"
           value={type}
@@ -70,7 +70,7 @@ export default function AdminModifyPage() {
 
       <div className="space-y-3">
         {filtered.map(store => (
-          <div key={store.id} className="rounded-3xl border border-white/10 bg-panel">
+          <div key={store.id} className="rounded-3xl border border-line bg-panel">
             <button className="flex w-full items-center justify-between px-5 py-4" onClick={() => setSelected(store)}>
               <span>
                 {store.name}
@@ -79,7 +79,7 @@ export default function AdminModifyPage() {
               <span className="text-xs text-muted">{store.address}</span>
             </button>
             {selected?.id === store.id && (
-              <div className="border-t border-white/10 p-5">
+              <div className="border-t border-line p-5">
                 {images.data?.length ? (
                   <div className="mb-4 h-40 overflow-hidden rounded-2xl">
                     <ImageSwiper urls={images.data} />

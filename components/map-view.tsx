@@ -187,7 +187,7 @@ export const MapView = () => {
     <div className="relative h-[calc(var(--vh)*100-56px)] sm:h-[calc(var(--vh)*100-64px)]">
       <div id="map" className="h-full w-full bg-night" />
       {!isNaverConfigured && (
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,#243056,transparent_45%),linear-gradient(180deg,#0b1020,#151b2e)]">
+        <div className="absolute inset-0 bg-night">
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center">
             <p className="text-amber">지도를 준비하는 중</p>
             <p className="max-w-sm text-sm text-muted">
@@ -199,7 +199,7 @@ export const MapView = () => {
                 <button
                   key={store.id}
                   onClick={() => handleSelectFromList(store)}
-                  className="rounded-2xl border border-white/10 bg-panel/80 px-4 py-3 text-left"
+                  className="rounded-2xl border border-line bg-panel px-4 py-3 text-left"
                 >
                   <p className="font-medium">{store.name}</p>
                   <p className="text-xs text-muted">
@@ -223,7 +223,7 @@ export const MapView = () => {
 
       <button
         onClick={goCurrent}
-        className="absolute right-3 z-10 flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-panel shadow-lg sm:right-5 bottom-[290px] sm:bottom-24"
+        className="absolute right-3 z-10 flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-panel shadow-lg sm:right-5 bottom-[290px] sm:bottom-24"
         aria-label="현재 위치"
       >
         <TbCurrentLocation />
