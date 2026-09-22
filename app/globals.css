@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --night: #f4f1ec;
+  --panel: #ffffff;
+  --panel-2: #efebe4;
+  --line: #e4dfd6;
+  --amber: #3c2f27;
+  --amber-dim: #5c4a3d;
+  --mist: #1c1916;
+  --muted: #7a736a;
+  --danger: #b42318;
+  --ok: #3f6b4a;
+  --vh: 1vh;
+}
+
+@theme inline {
+  --color-night: var(--night);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-amber: var(--amber);
+  --color-amber-dim: var(--amber-dim);
+  --color-mist: var(--mist);
+  --color-muted: var(--muted);
+  --color-danger: var(--danger);
+  --color-ok: var(--ok);
+  --font-sans: var(--font-pretendard), "Pretendard", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  height: calc(var(--vh, 1vh) * 100);
+  background: var(--night);
+  color: var(--mist);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(60, 47, 39, 0.12);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+.marker-chip {
+  position: relative;
+  white-space: nowrap;
+  background: #ffffff;
+  color: #3c2f27;
+  border: 1px solid #3c2f27;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 650;
+  box-shadow: 0 6px 16px rgba(28, 25, 22, 0.12);
+}
+
+.marker-chip::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  bottom: -7px;
+  border-width: 7px 6px 0;
+  border-style: solid;
+  border-color: #3c2f27 transparent transparent transparent;
+}
+
+.current-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #4c6b8a;
+  border: 2px solid white;
+  box-shadow: 0 0 0 6px rgba(76, 107, 138, 0.2);
+}
+
+.report-pin {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px 999px 999px 4px;
+  transform: rotate(-45deg);
+  background: #3c2f27;
+  border: 2px solid #ffffff;
+}
+
+input[type="checkbox"] {
+  accent-color: #3c2f27;
+}
+
+.admin-input {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--line);
+  background: var(--night);
+  padding: 0 0.75rem;
+  color: var(--mist);
+}
