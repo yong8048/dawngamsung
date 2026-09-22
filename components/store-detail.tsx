@@ -8,9 +8,11 @@ import { useUserStore } from "@/store/user-store";
 import { toggleFavorite } from "@/lib/firebase/users";
 import { toast } from "sonner";
 import { ImageSwiper } from "@/components/image-swiper";
+import { kakaoMapUrl, naverMapUrl } from "@/lib/map-links";
 import { FaPhone, FaStar, FaRegStar, FaCarSide, FaRestroom } from "react-icons/fa6";
 import { LiaMapMarkerAltSolid } from "react-icons/lia";
 import { FaRegCopy } from "react-icons/fa";
+import { SiKakao, SiNaver } from "react-icons/si";
 
 const rows = [
   { key: "address", label: "주소", icon: <LiaMapMarkerAltSolid size={20} />, copy: true },
@@ -94,6 +96,30 @@ export const StoreDetail = () => {
             </button>
           );
         })}
+      </div>
+
+      <div className="mt-auto border-t border-line px-5 py-5">
+        <p className="mb-3 text-xs text-muted">다른 지도에서 보기</p>
+        <div className="grid grid-cols-2 gap-2">
+          <a
+            href={naverMapUrl(store)}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center justify-center gap-2 rounded-2xl border border-line bg-night px-3 py-3 text-sm font-medium hover:bg-panel-2"
+          >
+            <SiNaver className="text-[#03C75A]" size={14} />
+            네이버지도
+          </a>
+          <a
+            href={kakaoMapUrl(store)}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center justify-center gap-2 rounded-2xl border border-line bg-night px-3 py-3 text-sm font-medium hover:bg-panel-2"
+          >
+            <SiKakao className="text-[#371D1E]" size={18} />
+            카카오맵
+          </a>
+        </div>
       </div>
     </section>
   );
