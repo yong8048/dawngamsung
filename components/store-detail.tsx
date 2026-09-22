@@ -98,7 +98,7 @@ export const StoreDetail = () => {
         })}
       </div>
 
-      <div className="mt-auto border-t border-line px-5 py-5">
+      <div className="mt-3 border-t border-line px-5 py-5">
         <p className="mb-3 text-xs text-muted">다른 지도에서 보기</p>
         <div className="grid grid-cols-2 gap-2">
           <a
